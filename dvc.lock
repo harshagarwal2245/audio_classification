@@ -20,3 +20,19 @@ stages:
     - path: data/raw/employee.csv
       md5: f4c82f200cf83b76d6da4536a729e1f1
       size: 5222202
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - path: data/raw/employee.csv
+      md5: f4c82f200cf83b76d6da4536a729e1f1
+      size: 5222202
+    - path: src/split_data.py
+      md5: 4a70c42239096eb187a2ecb191a227c9
+      size: 1013
+    outs:
+    - path: data/processed/test_audio.csv
+      md5: c25e6d82579b42e010add122290c3b2f
+      size: 1042500
+    - path: data/processed/train_audio.csv
+      md5: df0451f2035857ef2e92fa5ccdc1ac9d
+      size: 4179717
