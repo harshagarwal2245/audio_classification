@@ -14,6 +14,7 @@ stages:
     deps:
     - src/split_data.py
     - data/raw/employee.csv
+    - data_given/UrbanSound8K/audio
     outs:
     - data/processed/train_audio.csv
     - data/processed/test_audio.csv

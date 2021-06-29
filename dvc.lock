@@ -26,6 +26,10 @@ stages:
     - path: data/raw/employee.csv
       md5: f4c82f200cf83b76d6da4536a729e1f1
       size: 5222202
+    - path: data_given/UrbanSound8K/audio
+      md5: 20daba6f6b3696ee45614248f7f5f897.dir
+      size: 7089012242
+      nfiles: 8743
     - path: src/split_data.py
       md5: 4a70c42239096eb187a2ecb191a227c9
       size: 1013
