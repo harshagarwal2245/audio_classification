@@ -1,0 +1,39 @@
+base:
+  project: Audio classification 
+  random_state: 42
+  target_col: class
+
+data_source:
+  s3_source: data_given/UrbanSound8K/metadata/UrbanSound8K.csv
+
+load_data:
+  raw_dataset_csv: data/raw/employee.csv
+
+split_data:
+  train_path: data/processed/train_employee.csv
+  test_path: data/processed/test_employee.csv
+  test_size: 0.2
+
+estimators:
+  RandomForestClassifier:
+    params:
+      #n_estimators: 100
+      #max_feature: 6
+      n_estimators: 100
+      max_feature: 7
+  n_mfcc: 40
+  dense_units: 100
+  learning_rate: le-3
+  batch_size: 32
+  num_epochs: 200
+  optimizer: 'Adam'
+  dropout: 0.5
+
+model_dir:
+  saved_models 
+
+reports: 
+  params: report\param.json
+  scores: report\scores.json
+
+webapp_model_dir: prediction_service\\model\\finalized_model.sav 

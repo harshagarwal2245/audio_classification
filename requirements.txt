@@ -5,3 +5,4 @@ sklearn
 numpy 
 pandas
 tensorflow
+PyYAML
