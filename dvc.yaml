@@ -1,0 +1,10 @@
+stages: 
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml 
+    deps:
+      - src/get_data.py
+      - src/load_data.py
+      - data_given/UrbanSound8K/metadata/UrbanSound8K.csv
+      - data_given/UrbanSound8K/audio
+    outs: 
+      - data/raw/employee.csv

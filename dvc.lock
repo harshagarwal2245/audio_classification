@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: data_given/UrbanSound8K/audio
+      md5: 20daba6f6b3696ee45614248f7f5f897.dir
+      size: 7089012242
+      nfiles: 8743
+    - path: data_given/UrbanSound8K/metadata/UrbanSound8K.csv
+      md5: 5015c37ce7d54c0bb8cd40a0b5ee2074
+      size: 494104
+    - path: src/get_data.py
+      md5: d82ee556a3d31094949d8082ef6d2a9a
+      size: 884
+    - path: src/load_data.py
+      md5: dee31ff2f3e4f495dbaaa492221a212f
+      size: 1657
+    outs:
+    - path: data/raw/employee.csv
+      md5: f4c82f200cf83b76d6da4536a729e1f1
+      size: 5222202

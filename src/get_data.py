@@ -25,7 +25,7 @@ def get_data(config_path):
     config=read_params(config_path)
     data_path=config["data_source"]["s3_source"]
     df=pd.read_csv(data_path)
-    print(df.head())
+    #print(df.head())
     return df
 
 
